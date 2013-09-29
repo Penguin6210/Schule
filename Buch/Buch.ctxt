@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=frage
+comment0.target=java.lang.String\ scanf(java.lang.String)
+comment1.params=
+comment1.target=void\ automatischeAbfrage()
+comment2.params=t
+comment2.target=void\ titelSetzen(java.lang.String)
+comment3.params=a
+comment3.target=void\ autorSetzen(java.lang.String)
+comment4.params=i
+comment4.target=void\ isbnSetzen(java.lang.String)
+comment5.params=s
+comment5.target=void\ seitenzahlSetzen(int)
+comment6.params=
+comment6.target=void\ buchAufschlagen()
+comment7.params=seite
+comment7.target=void\ zuSeiteBlaettern(int)
+comment8.params=
+comment8.target=void\ info()
+numComments=9

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=void\ asciiAusgeben()
+comment0.text=public\ void\ parseChar(String\ input){\n//for\ (int\ x\ \=\ 0;\n}\n\n
+comment1.params=args
+comment1.target=void\ main(String[])
+numComments=2
