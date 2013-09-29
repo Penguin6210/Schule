@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=upper\ lower
+comment0.target=int\ getRandomInt(int,\ int)
+comment1.params=probability
+comment1.target=boolean\ getRandomBool(int)
+comment2.params=length
+comment2.target=java.lang.String\ getLine(int)
+comment3.params=
+comment3.target=void\ verse()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
