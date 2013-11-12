@@ -17,6 +17,7 @@ public class Speedtest
        System.out.println("ENDE, Zeit bei " + ghz + " Mrd. Rechenoperationen: " + time + " ms");
     }
     public static void main(String[] zargs){
-        System.out.println(System.currentTimeMillis());
+        Speedtest speedtest = new Speedtest();
+	speedtest.speed(2);
     }
 }

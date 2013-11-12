@@ -2,5 +2,5 @@
 comment0.params=k
 comment0.target=Ceasar(int)
 comment1.params=input
-comment1.target=java.lang.String\ entschluesseln(java.lang.String)
+comment1.target=String\ entschluesseln(String)
 numComments=2

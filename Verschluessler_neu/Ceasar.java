@@ -9,15 +9,14 @@ public class Ceasar
 {
    private int key;
    public Ceasar(int k){
-       if (k < 0){
-           k = -k;
-           System.err.println("FEHLER:Key ist negativ, Betrag vom Wert wird verwendet (neuer key: " + k + ")" );
-        }
        key = k;
     }
     
    public String entschluesseln(String input){
-       
+       if (key < 0){
+           System.err.println("FEHLER:Key ist negativ, Programm wird abgebrochen");
+           return null;
+        }
         
        String textVerschluesselt = "";
            for (int i=0; i<input.length(); i++){
