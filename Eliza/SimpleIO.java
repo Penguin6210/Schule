@@ -2,8 +2,8 @@ import java.io.*;
 public class SimpleIO{
 
 	//simple Method for entering text
-	  public String scanf(String frage) {
-      System.out.print(frage + ":");
+	  public String readline(String frage) {
+      System.out.print(frage);
       try {
          BufferedReader bufferedreader = new BufferedReader(new InputStreamReader(System.in));
          String number = bufferedreader.readLine();
@@ -29,7 +29,8 @@ public class SimpleIO{
             return (boolean) (false);
         }
         
-    }	
+    }
+}
 	
 
 	

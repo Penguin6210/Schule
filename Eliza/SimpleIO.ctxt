@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=frage
+comment0.target=String\ readline(String)
+comment1.params=upper\ lower
+comment1.target=int\ getRandomInt(int,\ int)
+comment2.params=probability
+comment2.target=boolean\ getRandomBool(int)
+numComments=3
