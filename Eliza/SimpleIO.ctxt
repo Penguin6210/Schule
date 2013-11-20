@@ -1,8 +1,18 @@
 #BlueJ class context
 comment0.params=frage
-comment0.target=String\ readline(String)
+comment0.target=java.lang.String\ readline(java.lang.String)
+comment0.text=\n\ simple\ Method\ for\ entering\ text\n
 comment1.params=upper\ lower
 comment1.target=int\ getRandomInt(int,\ int)
+comment1.text=\nsimply\ generates\ a\ random\ int\n
 comment2.params=probability
 comment2.target=boolean\ getRandomBool(int)
-numComments=3
+comment2.text=\ngenerates\ a\ Random\ Boolean\ with\ the\ probability\ for\ true\ as\ a\ int\ param\ in\ %\n
+comment3.params=type
+comment3.target=java.lang.String\ getEmoticon(int)
+comment3.text=\n\ generates\ a\ random\ emoticon\ of\ a\ defined\ type\n\ Types\:\n\ \ \ \ 1\ happy\n\ \ \ \ 2\ unhappy\n\ \ \ \ 3\ crying\n\ \ \ \ 4\ twinkle\n\ \ \ \ 5\ sticking\ tongue\ out\n\ \ \ \ 6\ loud\ laugthing\n\ \ \ \ 7\ being\ surprised\n\ \ \ \ \n
+comment4.params=caption
+comment4.target=void\ terminalBox(java.lang.String)
+comment5.params=c\ length
+comment5.target=void\ terminalLine(char,\ int)
+numComments=6
