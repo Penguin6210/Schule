@@ -87,7 +87,18 @@ public class SimpleIO{
         }
         System.out.println("");
     }
-   
+    
+   public boolean searchArray(String search, String input[]){
+       boolean found = false;
+       for (int i=0; i<input.length; i++){
+           if (input[i].equals(search)){
+               found = true;
+            }else{
+                found = false;
+            }
+        }
+        return found;
+    }
 }
     
 
