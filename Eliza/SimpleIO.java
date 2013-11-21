@@ -71,7 +71,9 @@ public class SimpleIO{
         
         }
     }
-    
+    /**
+     * Draws a Box with Text onto the terminal
+     */
     public void terminalBox (String caption){
     
         System.out.println("");
@@ -81,6 +83,9 @@ public class SimpleIO{
  
     }
 
+    /**
+     * Draws a line of a definebla char onto the terminal
+     */
     public void terminalLine (char c, int length){
         for (int i=1 ; i<= length; i++){
             System.out.print(c);
@@ -88,13 +93,15 @@ public class SimpleIO{
         System.out.println("");
     }
     
+    /**
+     * searches an array for a string of text
+     */
    public boolean searchArray(String search, String input[]){
        boolean found = false;
        for (int i=0; i<input.length; i++){
            if (input[i].equals(search)){
                found = true;
             }else{
-                found = false;
             }
         }
         return found;
