@@ -35,9 +35,7 @@ public class Eliza
                 
             }else if (io.searchArray(word, begruessung)){
                 System.out.println(begruessung[io.getRandomInt(begruessung.length, 0)]);
-                System.arraycopy(aiHelper,0,begruessung,begruessung.length,aiHelper.length);
-                aiHelper= new String [5];
-                aiNum=0;
+               
             }else if (io.searchArray(word, verabschiedung)){
                 System.out.println(verabschiedung[io.getRandomInt(verabschiedung.length, 0)]);
             }else{
@@ -54,4 +52,6 @@ public class Eliza
   
         }
     }
+   
+    
 }
