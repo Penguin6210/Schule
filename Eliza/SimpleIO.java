@@ -84,7 +84,7 @@ public class SimpleIO{
     }
 
     /**
-     * Draws a line of a definebla char onto the terminal
+     * Draws a line of a definable char onto the terminal
      */
     public void terminalLine (char c, int length){
         for (int i=1 ; i<= length; i++){
