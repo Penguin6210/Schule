@@ -1,4 +1,8 @@
 #BlueJ class context
-comment0.params=betrag
-comment0.target=void\ wechselgeldAusgeben(double)
-numComments=1
+comment0.params=
+comment0.target=Getraenkeautomat()
+comment1.params=
+comment1.target=void\ setup()
+comment2.params=betrag
+comment2.target=void\ wechselgeldAusgeben(double)
+numComments=3

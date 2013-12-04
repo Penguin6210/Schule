@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=frage
+comment0.target=java.lang.String\ readline(java.lang.String)
+comment0.text=\n\ simple\ Method\ for\ entering\ text\n
+comment1.params=upper\ lower
+comment1.target=int\ getRandomInt(int,\ int)
+comment1.text=\nsimply\ generates\ a\ random\ int\n
+comment2.params=probability
+comment2.target=boolean\ getRandomBool(int)
+comment2.text=\ngenerates\ a\ Random\ Boolean\ with\ the\ probability\ for\ true\ as\ a\ int\ param\ in\ %\n
+comment3.params=type
+comment3.target=java.lang.String\ getEmoticon(int)
+comment3.text=\n\ generates\ a\ random\ emoticon\ of\ a\ defined\ type\n\ Types\:\n\ \ \ \ 1\ happy\n\ \ \ \ 2\ unhappy\n\ \ \ \ 3\ crying\n\ \ \ \ 4\ twinkle\n\ \ \ \ 5\ sticking\ tongue\ out\n\ \ \ \ 6\ loud\ laugthing\n\ \ \ \ 7\ being\ surprised\n\ \ \ \ \n
+comment4.params=caption
+comment4.target=void\ terminalBox(java.lang.String)
+comment4.text=\n\ Draws\ a\ Box\ with\ Text\ onto\ the\ terminal\n
+comment5.params=c\ length
+comment5.target=void\ terminalLine(char,\ int)
+comment5.text=\n\ Draws\ a\ line\ of\ a\ definable\ char\ onto\ the\ terminal\n
+comment6.params=search\ input
+comment6.target=boolean\ searchArray(java.lang.String,\ java.lang.String[])
+comment6.text=\n\ searches\ an\ array\ for\ a\ string\ of\ text\n
+comment7.params=
+comment7.target=void\ clear()
+numComments=8

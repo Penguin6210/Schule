@@ -96,7 +96,7 @@ public class SimpleIO{
     /**
      * searches an array for a string of text
      */
-   public boolean searchArray(String search, String input[]){
+    public boolean searchArray(String search, String input[]){
        boolean found = false;
        for (int i=0; i<input.length; i++){
            if (input[i].equals(search)){
@@ -105,6 +105,12 @@ public class SimpleIO{
             }
         }
         return found;
+    }
+    
+    public void clear(){
+       for (int i = 0; i < 100;i++){
+           System.out.println("");
+        }
     }
 }
     
