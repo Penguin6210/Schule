@@ -107,11 +107,15 @@ public class SimpleIO{
         return found;
     }
     
+    /**
+     * clear the Terminal
+     */
     public void clear(){
-       for (int i = 0; i < 100;i++){
+       for (int i = 0; i < 50;i++){
            System.out.println("");
         }
     }
+    
 }
     
 
