@@ -106,7 +106,7 @@ public class Getraenkeautomat
       return (einwurf / 100);
    }
    
-   public double flascheKaufen(int sorte){
+   public double flascheAusgeben(int sorte){
        
      System.out.println("Bitte warten, eine kühle, köstliche Flasche " + sorten[sorte] + " wird ausgegeben...");
      mengen[sorte]--;
@@ -114,12 +114,34 @@ public class Getraenkeautomat
     
     }
    
+   public void kaufen(){
+	int input;
+	while (input == 4){
+	    input = Integer.parseInt(io.readline("Was darfs sein?\n[1] " + sorten[1] + "\n[2] " + sorten[2] + "\n[3] "+ sorten[3] + "\n[4] zurueck"));
+	    if(input == 4){
+	    }else if(guthaben >= preis[input]){
+	      if(mengen[input] != 0){
+		guthaben = guthaben - flascheAusgeben(input);
+		}else{
+		  System.out.println("Leider keine Flasche " + sorten[input] + " mehr da!");
+		  }
+	    }else{
+	    System.out.println("Sie müssen mehr Geld einwerfen!");
+	    }
+	}
+  }
+   
+   
    public void loop(){
        System.out.println("[info] Betriebsbereit");
        boolean leave = false;
        String command;
        while(leave == false){
-           command = io.readline("GETRÄNKEAUTOMAT>");
+           command = io.readline("GETRÄNKEAUTOMAT>").trim().toLowerCase();
+           switch (command){
+	      case "kaufen": kaufen(); break;
+	      default: System.out.println("Unbekannter Befehl"); break;
+		
         }
     }
 }
