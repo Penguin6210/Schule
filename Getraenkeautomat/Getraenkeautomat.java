@@ -14,53 +14,54 @@ public class Getraenkeautomat
         adminKey = io.getRandomInt(9999,1000);
         System.out.println("[info] starten ...");
         System.out.println("[info] neuer Admin-Key:"+ adminKey);
-    
+	System.out.println("[info] starten der ersteinrichtung");
+	this.setup();
     }
-    
+
     public void setup(){
-        
+
         System.out.println("[info] Starten der Einstellungen...");
         String command = "";
         while (!(command.equals("q"))){
             command = io.readline("SETUP>").trim().toLowerCase();
-            
+
             switch (command){
-                
+
                 case "sorten":
                     for (int i = 0; i < sorten.length; i++){
                         sorten[i]=io.readline(i+". Sorte:");
                     }
                     break;
-                    
+
                 case "mengen":
                     for (int i = 0; i < mengen.length; i++){
                         mengen[i]=Integer.parseInt(io.readline("Menge an " + sorten[i] + ":"));
                     }
                     break;
-                
+
                 case "info":
                     for (int i = 0; i < mengen.length; i++){
                         System.out.println( mengen[i] + "*" + sorten[i] + " Preis:" + preise[i] + "€"); 
                     }
                     break;
-                    
+
                 case "preise":
                     for (int i = 0; i < preise.length; i++){
                         preise[i]=(Double.parseDouble(io.readline("Preis von " + sorten[i] + " in cent:"))) / 100;
                     }
                     break;
-                    
+
                 case "quit":
                     System.out.println("[info] Verlassen der Einstellungen");
                     break;
-                    
+
                 default:
                     System.out.println("Befehl nicht gefunden\nmögliche Befehle:\nsorten setzt die verschiedenen Sorten von Getränken\nmengen setzt die Mengen der Arten\npreise setzt die Preise\ninfo gibt Informationen aus\nq    Verlässt die Einstellungen");
                     break;
             }
         }
     }
-    
+
     public void wechselgeldAusgeben(double betrag){
         int guthaben = (int)(betrag*100);
         int eur2 = guthaben / 200;
@@ -78,10 +79,10 @@ public class Getraenkeautomat
         int ct2 = guthaben / 2;
         guthaben = guthaben % 2;
         int ct1 = guthaben;
-        
+
         System.out.println("Ihr Wechselgeld: \n"+eur2+"*2EUR\n"+eur1+"*1EUR\n"+ct50+"*50ct\n"+ct20+"*20ct\n"+ct10+"*10ct\n"+ct5+"*5ct\n"+ct2+"*2ct\n"+ct1+"*1ct");
     }
-    
+
     public double einwerfen(){
         double einwurf = 0;
         String eingabe = "";
@@ -105,21 +106,21 @@ public class Getraenkeautomat
       }
       return (einwurf / 100);
    }
-   
+
    public double flascheAusgeben(int sorte){
-       
+
      System.out.println("Bitte warten, eine kühle, köstliche Flasche " + sorten[sorte] + " wird ausgegeben...");
      mengen[sorte]--;
      return (preise[sorte]);
-    
+
     }
-   
+
    public void kaufen(){
-	int input;
-	while (input == 4){
+	int input = 0;
+	while (input != 4){
 	    input = Integer.parseInt(io.readline("Was darfs sein?\n[1] " + sorten[1] + "\n[2] " + sorten[2] + "\n[3] "+ sorten[3] + "\n[4] zurueck"));
 	    if(input == 4){
-	    }else if(guthaben >= preis[input]){
+	    }else if(guthaben >= preise[input]){
 	      if(mengen[input] != 0){
 		guthaben = guthaben - flascheAusgeben(input);
 		}else{
@@ -130,18 +131,30 @@ public class Getraenkeautomat
 	    }
 	}
   }
-   
-   
+
+
    public void loop(){
        System.out.println("[info] Betriebsbereit");
        boolean leave = false;
        String command;
        while(leave == false){
-           command = io.readline("GETRÄNKEAUTOMAT>").trim().toLowerCase();
-           switch (command){
-	      case "kaufen": kaufen(); break;
-	      default: System.out.println("Unbekannter Befehl"); break;
-		
-        }
-    }
+           	command = io.readline("GETRÄNKEAUTOMAT>").trim().toLowerCase();
+           	switch (command){
+	      	case "kaufen": kaufen(); break;
+		case "einwerfen":einwerfen(); break;
+		case "ausgeben":
+			wechselgeldAusgeben(guthaben);
+			guthaben = 0;
+			break;
+		case "beenden":leave = true; break;
+	      	default: System.out.println("Unbekannter Befehl"); break;
+        	}
+	}
+   }
+
+   public static void main (String[] args){
+	Getraenkeautomat automat = new Getraenkeautomat();
+   	automat.loop();
+	}
+
 }

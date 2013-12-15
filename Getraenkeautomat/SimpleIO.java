@@ -1,4 +1,5 @@
 import java.io.*;
+
 public class SimpleIO{
 
     /**
@@ -16,7 +17,21 @@ public class SimpleIO{
          return "0";
       }
     }
-    
+
+    /**
+     * Simple Method for entering an Int
+     */
+    public int readint(String frage){
+        int read = 0;
+        while ( read == 0 ){
+            try{
+                read = Integer.parseInt(readline(frage));
+            }catch(java.lang.NumberFormatException e){
+                System.out.println("Eingabe nicht auswertbar");
+            }
+        }
+            return (read);
+    }
     /**
      *simply generates a random int
      */
@@ -115,7 +130,9 @@ public class SimpleIO{
            System.out.println("");
         }
     }
-    
+    public static void main (String args[]){
+    System.out.println("JUST A LIBRARY, NO ACTUAL CODE");
+    }
 }
     
 
