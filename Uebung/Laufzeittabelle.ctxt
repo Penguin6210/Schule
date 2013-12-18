@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ zeigeInfos()
+comment1.params=
+comment1.target=void\ ace()
+comment1.text=\n\ Mehr\ Variablen\ f\u00FCr\ einfacheres\ Verst\u00E4ndnis\ des\ Codes\n
+comment2.params=
+comment2.target=void\ shortACE()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
