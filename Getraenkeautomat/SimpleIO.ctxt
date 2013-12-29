@@ -26,6 +26,4 @@ comment7.text=\n\ searches\ an\ array\ for\ a\ string\ of\ text\n
 comment8.params=
 comment8.target=void\ clear()
 comment8.text=\n\ clear\ the\ Terminal\n
-comment9.params=args
-comment9.target=void\ main(java.lang.String[])
-numComments=10
+numComments=9

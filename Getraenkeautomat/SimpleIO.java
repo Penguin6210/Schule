@@ -130,9 +130,6 @@ public class SimpleIO{
            System.out.println("");
         }
     }
-    public static void main (String args[]){
-    System.out.println("JUST A LIBRARY, NO ACTUAL CODE");
-    }
 }
     
 

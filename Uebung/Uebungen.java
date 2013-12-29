@@ -11,7 +11,7 @@ public class Uebungen
         if (checkUpper(input)){
             System.out.println("Ich bin Unixoid, also in Kleinbuchstaben bitte");
         }else{
-            if (input == "bicher"){
+            if (input.equals("bicher")){
                 System.out.println ("Guten Tag herr Bicher");
             } else {
                 System.out.println (input + "? Noch nie gehört");
@@ -33,12 +33,12 @@ public class Uebungen
         switch (input.charAt(0)){
         
             case 65: case 97:
-                System.out.println(input + " fängt mit einem A an");
+                System.out.println(input + " fängt mit einem A an.");
                 return true;
 
         
             default:
-                System.out.println(input + " fängt mit einem A an");
+                System.out.println(input + " fängt nicht mit einem A sondern mit einem " + input.charAt(0) + " an.");
                 return false;
         }
     }
